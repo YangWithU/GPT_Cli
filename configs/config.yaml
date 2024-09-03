@@ -1,0 +1,12 @@
+# ModelName: choose from available GPT Model names
+# Enable: whether enable this model or not
+# if multiple enables were found, will choose the first
+Models:
+  - ModelName: DeepseekChat
+    Token: sk-123456
+    ApiURL: "https://api.deepseek.com/v1"
+    Enable: true
+  - ModelName: two
+    Token: 456
+    ApiURL: "https://url/v1"
+    Enable: false

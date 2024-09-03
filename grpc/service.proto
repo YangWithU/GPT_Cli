@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./";
+
+service StringService {
+  // Python sends a string to Go
+  rpc SendString (StringMessage) returns (EmptyMessage);
+  // Go sends a processed string to another Python client
+  rpc ReceiveString (EmptyMessage) returns (StringMessage);
+}
+
+message StringMessage {
+  string content = 1;
+}
+
+message EmptyMessage {}
